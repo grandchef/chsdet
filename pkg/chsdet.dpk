@@ -1,0 +1,65 @@
+package chsdet;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Charset Detector Library'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  Big5Freq in '..\src\Big5Freq.pas',
+  CharDistribution in '..\src\CharDistribution.pas',
+  chsdIntf in '..\src\chsdIntf.pas',
+  CustomDetector in '..\src\CustomDetector.pas',
+  Dump in '..\src\Dump.pas',
+  EUCKRFreq in '..\src\EUCKRFreq.pas',
+  EUCSampler in '..\src\EUCSampler.pas',
+  EUCTWFreq in '..\src\EUCTWFreq.pas',
+  GB2312Freq in '..\src\GB2312Freq.pas',
+  JISFreq in '..\src\JISFreq.pas',
+  JpCntx in '..\src\JpCntx.pas',
+  MBUnicodeMultiProber in '..\src\MBUnicodeMultiProber.pas',
+  MultiModelProber in '..\src\MultiModelProber.pas',
+  nsCodingStateMachine in '..\src\nsCodingStateMachine.pas',
+  nsCore in '..\src\nsCore.pas',
+  nsEscCharsetProber in '..\src\nsEscCharsetProber.pas',
+  nsGroupProber in '..\src\nsGroupProber.pas',
+  nsHebrewProber in '..\src\nsHebrewProber.pas',
+  nsLatin1Prober in '..\src\nsLatin1Prober.pas',
+  nsMBCSMultiProber in '..\src\nsMBCSMultiProber.pas',
+  nsPkg in '..\src\nsPkg.pas',
+  nsSBCharSetProber in '..\src\nsSBCharSetProber.pas',
+  nsSBCSGroupProber in '..\src\nsSBCSGroupProber.pas',
+  nsUniversalDetector in '..\src\nsUniversalDetector.pas',
+  vi in '..\src\vi.pas',
+  LangBulgarianModel in '..\src\sbseq\LangBulgarianModel.pas',
+  LangCyrillicModel in '..\src\sbseq\LangCyrillicModel.pas',
+  LangGreekModel in '..\src\sbseq\LangGreekModel.pas',
+  LangHebrewModel in '..\src\sbseq\LangHebrewModel.pas';
+
+end.
